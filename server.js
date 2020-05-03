@@ -15,10 +15,14 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/budget", {
+
+//Sets up the heroku and local mongodb server ports.
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/budget";
+mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useFindAndModify: false
-});
+})
+
 
 // routes
 app.use(require("./routes/api.js"));

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "lite-server": "lite-server"
+    "lite-server": "lite-server",
+    "seed": "node seeders/seed.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,9 @@
     "compression": "^1.7.4",
     "express": "^4.17.1",
     "lite-server": "^2.5.3",
+    "loader": "^2.1.1",
     "mongoose": "^5.5.15",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "seed": "^0.4.4"
   }
 }
